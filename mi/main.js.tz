@@ -1,0 +1,28 @@
+﻿$(function() {
+        $('.navbar-toggler').click(function() {
+            $('.navbar-collapse').toggleClass('show')
+        })
+    })
+    //返回顶部
+function gotop() {
+    h = $(window).height();
+    t = $(document).scrollTop();
+    if (t > h) {
+        $('#gotop').show();
+    } else {
+        $('#gotop').hide();
+    }
+}
+$(function(e) {
+    gotop();
+    $('#gotop').click(function() {
+        $("html,body").animate({ scrollTop: '0' }, 400);
+    })
+
+});
+$(window).scroll(function(e) {
+        gotop();
+    })
+    //返回顶部end
+
+//document.writeln("<script type=\'text/javascript\' src=\'https://v1.cnzz.com/z_stat.php?id=1278665185&web_id=1278665185\'></script>");
